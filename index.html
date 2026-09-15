@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>浩涛工作室 · 把技术、数据与 AI 做成能用的东西</title>
+<meta name="description" content="浩涛工作室（蒋浩涛）的个人主站：技术笔记、AI 提示词库、量化与金融分析、文档自动化。">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>(function(){try{var t=localStorage.getItem("ht-theme");if(t)document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="logo" href="index.html" aria-label="浩涛工作室 首页">
+      <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true"><rect x="4" y="4" width="56" height="56" rx="16" fill="none" stroke="var(--brand)" stroke-width="3"/><text x="32" y="43" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="30" font-weight="700" text-anchor="middle" fill="var(--brand)">浩</text></svg>
+      <span>浩涛工作室<span class="en">HAOTAO STUDIO</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="active">首页</a>
+      <a href="blog.html">文章</a>
+      <a href="lab.html">实验室</a>
+      <a href="about.html">关于</a>
+      <a href="contact.html">联系</a>
+    </div>
+    <button class="theme-btn" aria-label="切换到亮色主题">
+      <svg class="icon-sun" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+      <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+    <button class="burger" aria-label="打开菜单" aria-expanded="false">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <span class="eyebrow">Haotao Studio · Personal Site</span>
+    <h1>浩涛<em>工作室</em></h1>
+    <p class="lead">把技术、数据与 AI，做成能用的东西。这里存放我的技术笔记、AI 提示词库，以及量化与金融分析的思考。</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="blog.html">浏览文章</a>
+      <a class="btn btn-ghost" href="about.html">关于我</a>
+    </div>
+    <div class="ticker-wrap">
+      <div class="ticker-label"><span>PULSE · 工作室脉搏</span><span>虚构行情 · 仅作装饰</span></div>
+      <canvas id="pulseChart" aria-label="装饰性动态行情线" role="img"></canvas>
+      <div class="ticker" aria-hidden="true"><div class="ticker-track" id="tickerTrack"></div></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="section reveal">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="h2">最新文章</h2>
+        <a class="more" href="blog.html">全部文章 →</a>
+      </div>
+      <div class="grid-cards" id="latestPosts"></div>
+      <div class="notice" id="latestPostsFallback" hidden>文章列表暂时没有加载出来——如果你是本地双击打开的，请先运行文件夹里的「启动本地预览.bat」，或直接访问线上站点。</div>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="h2">提示词与作品</h2>
+        <a class="more" href="lab.html">进入实验室 →</a>
+      </div>
+      <div class="grid-cards" id="labPreview"></div>
+      <div class="notice" id="labPreviewFallback" hidden>内容列表暂时没有加载出来——请通过「启动本地预览.bat」或线上站点查看。</div>
+    </div>
+  </section>
+
+  <section class="section reveal">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="h2">这个站在做什么</h2>
+        <a class="more" href="contact.html">联系我 →</a>
+      </div>
+      <div class="prose">
+        <p>浩涛工作室是我的个人工作台：记录工作中的技术实践（Python 数据分析、文档自动化），沉淀日常使用的 AI 提示词，也整理量化与金融分析的学习笔记。所有内容都托管在 GitHub 上，纯静态、无广告、加载飞快。</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <div>© <span id="y">2026</span> 浩涛工作室 · GitHub Pages 托管</div>
+    <div><a href="https://github.com/jhtfly" target="_blank" rel="noopener">GitHub @jhtfly</a>　<span class="foot-seal">「浩」</span></div>
+  </div>
+</footer>
+
+<script src="assets/js/md.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>
